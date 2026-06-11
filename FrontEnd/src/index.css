@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #0D0F14;
+    color: #E8EAF0;
+    font-family: 'Inter', sans-serif;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #252830;
+    border-radius: 3px;
+  }
+}
+
+@layer utilities {
+  .animate-tick {
+    animation: tick 0.25s ease;
+  }
+  @keyframes tick {
+    from { opacity: 0; transform: translateY(5px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
